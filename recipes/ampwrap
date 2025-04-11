@@ -21,7 +21,6 @@ build:
     - ampwrap = ampwrap.cli:cli
     - ampwrap-long = ampwrap.cli:long
     - ampwrap-short = ampwrap.cli:short
-
 requirements:
   host:
     - python >= 3.8
@@ -29,6 +28,7 @@ requirements:
     - setuptools
   run:
     - python >=3.8
+    - python-click >=8.0
     - snakemake >=7.0
     - click >=8.0
     - cutadapt >=3.0
