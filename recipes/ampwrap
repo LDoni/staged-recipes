@@ -14,11 +14,11 @@ build:
   noarch: python
   number: 0
   script:
-    - install -d ${PREFIX}/bin/
-    - install -m 755 AmpWrap_long AmpWrap_short ${PREFIX}/bin/
+    - install -d ${PREFIX}/lib/python3.9/site-packages/ampwrap/
+    - install -m 755 AmpWrap_long AmpWrap_short ${PREFIX}/lib/python3.9/site-packages/ampwrap/
     - {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - ampwrap = ampwrap.cli:cli
+    - ampwrap = ampwrap.cli:main
     - ampwrap-long = ampwrap.cli:long
     - ampwrap-short = ampwrap.cli:short
 requirements:
